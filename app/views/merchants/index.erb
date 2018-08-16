@@ -1,1 +1,10 @@
-<h1> Hello Merchants </h1>
+<h1> All Merchants </h1>
+
+<% @merchants.each do |merchant| %>
+  <ul>
+    <li> Merchant Id: <%= merchant.merchant_id %></li>
+    <li> Name: <%= merchant.name %></li>
+    <li> Created: <%= merchant.created_at %></li>
+    <li> Updated: <%= merchant.updated_at %></li>
+  </ul>
+<% end %>
