@@ -10,4 +10,6 @@ class LittleShopApp < Sinatra::Base
     redirect '/merchants'
   end
 
+
+
 end
