@@ -4,5 +4,4 @@ validates_presence_of :name, :merchant_id, :created_at, :updated_at
 
 
 
-
 end
