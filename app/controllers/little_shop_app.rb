@@ -12,4 +12,13 @@ class LittleShopApp < Sinatra::Base
 
 
 
+  get '/merchants/:id' do
+    @merchant = Merchant.find(params[:id])
+    erb :"merchants/show"
+  end
+
+  get '/merchants/id/edit' do
+    @merchant = Merchant.find(params[:id])
+    erb :edit
+  end
 end
