@@ -9,6 +9,16 @@ class LittleShopApp < Sinatra::Base
     Merchant.create(params[:merchant])
     redirect '/merchants'
   end
+  
+  get '/invoices' do
+    @invoices = Invoice.all
+    erb :"invoices/index"
+  end
+  
+  post '/invoices' do
+    Invoice.create(params[:invoice])
+    redirect '/invoices'
+  end
 
 
 
