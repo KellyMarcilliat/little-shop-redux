@@ -16,7 +16,7 @@ RSpec.describe 'Merchant index page' do
   it 'should have an edit button' do
     visit '/merchants/1'
 
-    save_and_open_page
+    #save_and_open_page
 
     expect(page).to have_button('Edit')
 
