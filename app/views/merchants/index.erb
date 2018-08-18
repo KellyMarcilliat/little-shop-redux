@@ -1,5 +1,8 @@
 <h1> All Merchants </h1>
 
+<form action="/merchants/new">
+    <input type="submit" value="Create A New Merchant">
+  </form>
 <% @merchants.each do |merchant| %>
   <ul>
     <li> Merchant Id: <%= merchant.merchant_id %></li>
