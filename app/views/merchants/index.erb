@@ -28,14 +28,18 @@
     <li> Created: <%= merchant.created_at %></li>
     <li> Updated: <%= merchant.updated_at %></li>
   </ul>
-  <button type='button' value="Edit">
-    <a href="/merchants/<%=merchant.id %>/edit">Edit
-  </button>
+
+  <form action="/merchants/<%=merchant.id%>/edit" method="GET">
+     <input type="hidden" name="_method" value="EDIT">
+     <input type="submit" value="Edit">
+   </form>
 
   <form action="/merchants/<%= merchant.id %>" method="POST">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="delete"/>
+    <input type="submit" value="Delete"/>
   </form>
+
+
 
 <% end %>
 </html>
