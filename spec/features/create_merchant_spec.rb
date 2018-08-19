@@ -1,7 +1,7 @@
 RSpec.describe 'Merchant new page' do
   it 'should have a cancel button' do
     visit '/merchants/new'
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_button('Cancel')
   end
 
@@ -26,6 +26,7 @@ RSpec.describe 'Merchant new page' do
     click_on "Cancel"
 
     expect(current_path).to eq('/merchants')
+
 
    end
 
