@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Shrikhand" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+
+
+<h1>Invoices</h1>
+
+<!-- navbar: littleshop            merchants items invoices -->
+
+<% @invoices.each do |invoice| %>
+    <ul>
+      <li><%= invoice.id %></li>
+      <!-- <li><%= invoice.customer_id %></li>
+      <li><%= invoice.merchant_id %></li>
+      <li><%= invoice.status %></li>
+      <li><%= invoice.created_at %></li>
+      <li><%= invoice.updated_at %></li> -->
+      <!-- <li>edit button</li>
+      <li>delete button</li> -->
+    </ul>
+  </body>
+</html>  
+<% end %>
