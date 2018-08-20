@@ -51,7 +51,7 @@ RSpec.describe 'Merchant index page' do
     click_button "Create A New Merchant"
 
       expect(current_path).to eq("/merchants/new")
-    end
+  end
 
   it 'should have a delete button' do
     visit '/merchants'

@@ -16,10 +16,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_194303) do
   enable_extension "plpgsql"
 
   create_table "merchants", force: :cascade do |t|
-    t.integer "merchant_id"
     t.text "name"
-    t.text "created_at"
-    t.text "updated_at"
   end
 
 end
