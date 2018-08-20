@@ -19,6 +19,14 @@ class LittleShopApp < Sinatra::Base
     Invoice.create(params[:invoice])
     redirect '/invoices'
   end
+  
+  # need read, update, and delete routes
+  get '/invoices/:id' do 
+    # require 'pry'; binding.pry 
+    @invoice = Invoice.find(params[:id]) 
+    erb :"invoices/show" 
+  end 
+    
 
 
 
