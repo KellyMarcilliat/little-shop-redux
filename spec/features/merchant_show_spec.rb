@@ -1,7 +1,7 @@
 RSpec.describe 'Merchant index page' do
   before(:each) do
-    @merchant_1 = Merchant.create(merchant_id: 2, name: "Bob", created_at: "now", updated_at: "never")
-    @merchant_2 = Merchant.create(merchant_id: 4, name: "Mary", created_at: "now", updated_at: "never")
+    @merchant_1 = Merchant.create( name: "Bob")
+    @merchant_2 = Merchant.create( name: "Mary")
   end
   context 'show merchant details' do
     it 'should show one merchant' do

@@ -1,7 +1,7 @@
 RSpec.describe 'Merchant edit page' do
   before(:each) do
-    @merchant_1 = Merchant.create(merchant_id: 2, name: "Bob", created_at: "now", updated_at: "never")
-    @merchant_2 = Merchant.create(merchant_id: 4, name: "Mary", created_at: "now", updated_at: "never")
+    @merchant_1 = Merchant.create(name: "Bob")
+    @merchant_2 = Merchant.create( name: "Mary")
   end
   context 'show merchant details' do
     it 'should show the merchant you are updating' do
@@ -36,6 +36,6 @@ RSpec.describe 'Merchant edit page' do
       expect(current_path).to eq("/merchants/#{@merchant_1.id}")
       expect @merchant_1.name == "Modcloth"
     end
-    
+
   end
 end
