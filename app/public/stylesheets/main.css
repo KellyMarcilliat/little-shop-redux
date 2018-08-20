@@ -1,0 +1,38 @@
+body{
+  background-color: #B9F5D8;
+  font-family: Source Sans Pro;
+
+}
+div{
+  text-align: center;
+  content-align: center;
+  background-color: #6B8F71;
+}
+h1{
+  text-align: center;
+  font-family: Source Sans Pro;
+}
+form {
+  display: inline-block;
+}
+nav {
+  text-align: right;
+  display: block;
+  border:1px solid white;
+  background-color: #1D1E18;
+  color: white;
+}
+nav ul {
+  display: inline-block;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding-left: 30px;
+  padding-right:  30px;
+
+}
+
+#logo {
+  float: left;
+}
