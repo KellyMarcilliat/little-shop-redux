@@ -5,7 +5,7 @@ RSpec.describe 'Merchant index page' do
     merchant_1 = Merchant.create(name: "Maria")
     visit '/merchants'
 
-    save_and_open_page
+    #save_and_open_page
 
     expect(page).to have_button('Edit')
   end
