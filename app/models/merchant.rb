@@ -1,7 +1,7 @@
 class Merchant < ActiveRecord::Base
+  has_many  :invoices
+  validates_presence_of :name
 
-validates_presence_of :name
-# validates_presence_of :updated_at
 
 
 end
