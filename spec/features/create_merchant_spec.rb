@@ -23,7 +23,7 @@ RSpec.describe 'Merchant new page' do
 
   it 'should be able to cancel' do
     visit 'merchants/new'
-    click_on "Cancel"
+    click_button "Cancel"
 
     expect(current_path).to eq('/merchants')
 
