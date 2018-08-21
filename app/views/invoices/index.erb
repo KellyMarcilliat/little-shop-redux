@@ -1,29 +1,55 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Shrikhand" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/main.css" title="text/css" />
   </head>
   
+  
+  
   <body>
+    <header>
+      <nav>
+        <ul id = 'logo'>
+          <li >LittleShop</li>
+        </ul>
+        <ul>
+          <li>Merchants</li>
+          <li>Items</li>
+          <li> Invoices</li>
+        </ul>
+      </nav>
+    </header>
     
+    <h1>Invoices</h1>
 
+    <div>
+      <form action="/invoices/new">
+        <input type="submit" value="Create An Invoice">
+      </form>    
+    </div>
+  
+    <% @invoices.each do |invoice| %>
+      <ul>
+        <li>Invoice # <%= invoice.id %></li>
+        <!-- <li><%= invoice.customer_id %></li>
+        <li><%= invoice.merchant_id %></li>
+        <li><%= invoice.status %></li>
+        <li><%= invoice.created_at %></li>
+        <li><%= invoice.updated_at %></li> -->
+        <!-- <li>edit button</li>
+        <li>delete button</li> -->
+      </ul>
+      <form action="/invoices/<%=invoice.id%>/edit" method="GET">
+         <input type="hidden" name="_method" value="EDIT">
+         <input type="submit" value="Edit">
+       </form>
 
-<h1>Invoices</h1>
-
-<!-- navbar: littleshop            merchants items invoices -->
-
-<% @invoices.each do |invoice| %>
-    <ul>
-      <li><%= invoice.id %></li>
-      <!-- <li><%= invoice.customer_id %></li>
-      <li><%= invoice.merchant_id %></li>
-      <li><%= invoice.status %></li>
-      <li><%= invoice.created_at %></li>
-      <li><%= invoice.updated_at %></li> -->
-      <!-- <li>edit button</li>
-      <li>delete button</li> -->
-    </ul>
+      <form action="/invoices/<%= invoice.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete"/>
+      </form>
+    <% end %>
   </body>
 </html>  
-<% end %>
