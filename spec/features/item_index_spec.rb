@@ -9,7 +9,7 @@ RSpec.describe 'Item index page' do
 
     it 'should show all items' do
       visit '/items'
-      save_and_open_page
+      #save_and_open_page
 
       expect(page).to have_content(@item_1.name)
       expect(page).to have_content(@item_2.name)

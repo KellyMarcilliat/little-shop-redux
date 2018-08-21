@@ -1,0 +1,17 @@
+<h1> <%= @item.name %></h1>
+<form action="/items/<%=@item.id%>/edit" method="GET">
+     <input type="hidden" name="_method" value="EDIT">
+     <input type="submit" value="Edit">
+ </form>
+
+ <form action="/items" method="POST">
+         <input type="hidden" name="_method" value="DELETE">
+         <input class="deletebutton" type="submit" value="Delete">
+  </form>
+      <ul>
+        <li><img src="http://placekitten.com/200/300" alt="image placeholder"/> </li>
+          <li><%= @item.name %></li>
+          <li><%= @item.description %></li>
+          <li><%=@item.unit_price %></li>
+
+      <ul>
