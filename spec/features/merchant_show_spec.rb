@@ -1,4 +1,4 @@
-RSpec.describe 'Merchant index page' do
+RSpec.describe 'Merchant show page' do
   before(:each) do
     @merchant_1 = Merchant.create( name: "Bob")
     @merchant_2 = Merchant.create( name: "Mary")

@@ -18,7 +18,7 @@ RSpec.describe 'Merchant edit page' do
     end
     it 'should have an update merchant button' do
       visit "/merchants/#{@merchant_1.id}/edit"
-        save_and_open_page
+        #save_and_open_page
       expect(page).to have_button("Update Merchant")
     end
 
