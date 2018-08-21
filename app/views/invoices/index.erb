@@ -32,7 +32,7 @@
   
     <% @invoices.each do |invoice| %>
       <ul>
-        <li>Invoice # <%= invoice.id %></li>
+        <li>Invoice <%= invoice.id %></li>
         <!-- <li><%= invoice.customer_id %></li>
         <li><%= invoice.merchant_id %></li>
         <li><%= invoice.status %></li>
@@ -43,12 +43,12 @@
       </ul>
       <form action="/invoices/<%=invoice.id%>/edit" method="GET">
          <input type="hidden" name="_method" value="EDIT">
-         <input type="submit" value="Edit">
+         <input type="submit" value="Edit <%= invoice.id%>">
        </form>
 
       <form action="/invoices/<%= invoice.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete"/>
+        <input type="submit" value="Delete <%= invoice.id%>"/>
       </form>
     <% end %>
   </body>

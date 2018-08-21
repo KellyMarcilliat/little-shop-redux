@@ -39,20 +39,19 @@ class LittleShopApp < Sinatra::Base
     redirect '/invoices'
   end
 
-  # need read, update, and delete routes
-  get '/invoices/:id' do
-    # require 'pry'; binding.pry
-    @invoice = Invoice.find(params[:id])
-    erb :"invoices/show"
-  end
-
-  get '/invoices/:id/edit' do
-    @invoice = Invoice.find(params[:id])
-    erb :edit
-  end
-
-  put '/invoices/:id' do |id|
-    Invoice.update(id.to_i, params[:invoice])
+  get '/invoices/:id' do 
+    # require 'pry'; binding.pry 
+    @invoice = Invoice.find(params[:id]) 
+    erb :"invoices/show" 
+  end 
+  
+  get '/invoices/:id/edit' do 
+    @invoice = Invoice.find(params[:id]) 
+    erb :'invoices/edit' 
+  end 
+  
+  put '/invoices/:id' do |id| 
+    Invoice.update(id.to_i, params[:invoice]) 
     redirect "/invoices/#{id}"
   end
 
@@ -88,7 +87,4 @@ class LittleShopApp < Sinatra::Base
     Item.destroy(params[:id].to_i)
     redirect '/items'
   end
-
-
-
 end
