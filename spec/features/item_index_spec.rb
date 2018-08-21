@@ -1,7 +1,7 @@
 RSpec.describe 'Item index page' do
 
   before(:each) do
-    @item_1 = Item.create( name: "A neat item", description: "Awesome, Wow.", unit_price:10, image: 'Look_how_cool_pic')
+    @item_1 = Item.create( name: "Cool", description: "Awesome, Wow.", unit_price:10, image: 'Look_how_cool_pic')
     @item_2 = Item.create( name: "An item you need",  description: "Not so cool", unit_price: 50, image: 'pic_of_a_not_cool_thing')
   end
 
@@ -35,6 +35,14 @@ RSpec.describe 'Item index page' do
       click_button "Create A New Item"
 
         expect(current_path).to eq("/items/new")
+    end
+
+    it 'should be able to delete an item' do
+      visit '/items'
+      click_button('Delete', match: :first)
+
+      expect(page).to_not have_content(@item_1.name)
+
     end
 
 
