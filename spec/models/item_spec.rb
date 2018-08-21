@@ -12,7 +12,7 @@ RSpec.describe Item do
 
   describe 'Validations' do
     it 'is valid with all attributes present' do
-      item = Item.create(name: "Smaug's Bakery", description: "Delicious pastries", unit_price: 12, image: 'pic_of_cat')
+      item = Item.create(name: "Smaug's Cupcake", description: "Delicious pastries", unit_price: 12, image: 'pic_of_cat')
 
       expect(item).to be_valid
     end
@@ -25,20 +25,20 @@ RSpec.describe Item do
     end
     #
     it 'is invalid without a description' do
-      item = Item.create(name: "Smaug's Bakery", unit_price: 12, image: 'pic_of_cat')
+      item = Item.create(name: "Smaug's Cupcake", unit_price: 12, image: 'pic_of_cat')
 
       expect(item).to_not be_valid
     end
     #
     it 'is invalid without a unit_price' do
-      item = Item.create(name: "Smaug's Bakery", description: "Delicious pastries", image: 'pic_of_cat')
+      item = Item.create(name: "Smaug's Cupcake", description: "Delicious pastries", image: 'pic_of_cat')
 
       expect(item).to_not be_valid
     end
 
 
     it 'is invalid without a picture' do
-      item = Item.create(name: "Smaug's Bakery", description: "Delicious pastries", unit_price: 12)
+      item = Item.create(name: "Smaug's cupcake", description: "Delicious pastries", unit_price: 12)
       expect(item).to_not be_valid
 
     end
