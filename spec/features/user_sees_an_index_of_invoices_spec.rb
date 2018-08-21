@@ -7,7 +7,7 @@ RSpec.describe 'Invoices index page' do
     it 'should show all invoices' do
 
       visit '/invoices'
-      save_and_open_page
+      #save_and_open_page
 
       expect(page).to have_content("Invoice #{@invoice_1.id}")
       expect(page).to have_content("Invoice #{@invoice_2.id}")
