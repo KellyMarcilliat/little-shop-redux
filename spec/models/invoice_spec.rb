@@ -13,13 +13,13 @@ RSpec.describe Invoice do
     # end
     
     it 'is invalid without merchant_id' do
-      invoice = Invoice.create(invoice_id: 3, customer_id: 30, status: "pending",  created_at: "3000", updated_at: "30000")
+      invoice = Invoice.create(id: 3, customer_id: 30, status: "pending",  created_at: "3000", updated_at: "30000")
     
       expect(invoice).to_not be_valid
     end
     
     it 'is invalid without status' do
-      invoice = Invoice.create(invoice_id: 4, customer_id: 40, merchant_id: 400, created_at: "4000", updated_at: "40000")
+      invoice = Invoice.create(id: 4, customer_id: 40, merchant_id: 400, created_at: "4000", updated_at: "40000")
     
       expect(invoice).to_not be_valid
     end

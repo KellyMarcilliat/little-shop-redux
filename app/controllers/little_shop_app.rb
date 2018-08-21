@@ -33,7 +33,7 @@ class LittleShopApp < Sinatra::Base
   
   get '/invoices/:id/edit' do 
     @invoice = Invoice.find(params[:id]) 
-    erb :edit 
+    erb :'invoices/edit' 
   end 
   
   put '/invoices/:id' do |id| 
