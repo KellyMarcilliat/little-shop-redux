@@ -20,13 +20,13 @@
           </ul>
         </nav>
       </header>
-<div>
   <h1> Items </h1>
   <form action="/items/new">
       <input type="submit" value="Create A New Item">
     </form>
+  <div class ='grid-container' >
   <% @items.each do |item| %>
-    <ul>
+    <ul >
       <li><img src="http://placekitten.com/200/300" alt="image placeholder"/> </li>
       <li> Name:<a href="/items/<%=item.id%>"><%=item.name%></a> </li>
       <li>$ <%='%.2f' % item.unit_price%></li></br>
@@ -36,7 +36,10 @@
             <input type="hidden" name="_method" value="Delete">
             <input type="submit" value="Delete">
           </form>
+
   <% end %>
+</div>
+
 
   </body>
   </html>

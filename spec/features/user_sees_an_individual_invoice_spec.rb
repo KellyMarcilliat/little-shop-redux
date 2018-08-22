@@ -7,24 +7,24 @@ RSpec.describe 'Invoice show page' do
     it 'should show invoice id' do
 
       visit '/invoices/1'
-      save_and_open_page
+      #save_and_open_page
 
       expect(page).to have_content("Invoice: #{@invoice_1.id}")
     end
-    it 'should show invoice status' do 
+    it 'should show invoice status' do
       visit '/invoices/2'
-      
+
       expect(page).to have_content("Invoice: #{@invoice_2.id} - #{@invoice_2.status}")
-    end 
+    end
     it 'should have delete button' do
       visit '/invoices/1'
-      
+
       expect(page).to have_button("Delete")
       expect(page).to have_button("Delete")
-    end    
+    end
     it 'should have edit button' do
       visit '/invoices/2'
-      
+
       expect(page).to have_button("Edit")
       expect(page).to have_button("Edit")
     end
@@ -32,7 +32,7 @@ RSpec.describe 'Invoice show page' do
       visit '/invoices/1'
       click_button('Edit')
       expect(current_path).to eq ("/invoices/#{@invoice_1.id}/edit")
-      save_and_open_page
+      #save_and_open_page
     end
   end
 end

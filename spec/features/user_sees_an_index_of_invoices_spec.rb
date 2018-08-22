@@ -14,16 +14,16 @@ RSpec.describe 'Invoices index page' do
     end
     it 'should have delete button for each invoice' do
       visit '/invoices'
-      
+
       expect(page).to have_button("Delete #{@invoice_1.id}")
       expect(page).to have_button("Delete #{@invoice_2.id}")
-    end    
+    end
     it 'should have edit button for each invoice' do
       visit '/invoices'
-      save_and_open_page
-      
+      #save_and_open_page
+
       expect(page).to have_button("Edit #{@invoice_1.id}")
       expect(page).to have_button("Edit #{@invoice_2.id}")
     end
-  end    
+  end
 end
