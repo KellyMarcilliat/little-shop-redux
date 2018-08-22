@@ -22,9 +22,10 @@
         </nav>
       </header>
 <div>
-<form action="/merchants/dashboard">
-  <input type = "submit" value="Dashboard">
-</form>
+  <form action="/merchants/dashboard" method="GET">
+       <input type="hidden" name="_method" value="DASHBOARD">
+       <input type="submit" value="Dashboard">
+     </form>
 
 <h1> Merchants </h1>
 
@@ -32,7 +33,7 @@
 <form action="/merchants/new">
     <input type="submit" value="Create A New Merchant">
   </form>
-  </div
+</div>
 <% @merchants.each do |merchant| %>
   <ul>
 
@@ -40,6 +41,7 @@
 
   </ul>
 
+<div class = 'buttons'>
   <form action="/merchants/<%=merchant.id%>/edit" method="GET">
      <input type="hidden" name="_method" value="EDIT">
      <input type="submit" value="Edit">
@@ -49,6 +51,7 @@
     <input type="hidden" name="_method" value="DELETE">
     <input type="submit" value="Delete"/>
   </form>
+</div>
 
 <% end %>
 </body>

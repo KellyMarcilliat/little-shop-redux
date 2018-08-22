@@ -58,3 +58,8 @@ nav li {
   list-style: none;
   text-align: center;
 }
+
+.button {
+color: #ff0000;
+  align-content: center;
+}
