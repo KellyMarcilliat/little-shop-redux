@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <link rel="stylesheet" href="/stylesheets/main.css" title="text/css" />
+  <link rel="stylesheet" href="stylesheets/main.css" title="text/css" />
 
   <title>LittleShop</title>
 
@@ -22,7 +22,12 @@
         </nav>
       </header>
 <div>
+<div id = 'kittens'>
+  <a href="/merchants/dashboard"> Dashboard </a>
+</div>
+
 <h1> Merchants </h1>
+
 
 <form action="/merchants/new">
     <input type="submit" value="Create A New Merchant">
@@ -30,7 +35,7 @@
   </div
 <% @merchants.each do |merchant| %>
   <ul>
-    
+
     <li> Name:<a href="/merchants/<%=merchant.id%>"><%=merchant.name%></a> </li>
 
   </ul>

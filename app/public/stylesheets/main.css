@@ -3,6 +3,13 @@ body{
   font-family: Source Sans Pro;
 
 }
+ul {
+  text-align: center;
+  list-style: none;
+}
+li {
+  list-style: none;
+}
 div{
   text-align: center;
   content-align: center;
@@ -35,4 +42,19 @@ nav li {
 
 #logo {
   float: left;
+}
+
+#kittens{
+  float: left;
+}
+
+.grid-container {
+ display: inline-block;
+ grid-template-columns: auto auto auto auto;
+ padding: 10px;
+ justify-content: space-between
+}
+ .gird-container ul li{
+  list-style: none;
+  text-align: center;
 }
